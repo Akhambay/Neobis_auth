@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "dj_rest_auth.registration",
+    "drf_spectacular",
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
@@ -60,6 +61,13 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Authorization API Project",
+    "DESCRIPTION": "A simple authorization project to learn about DRF",
+    "VERSION": "1.0.0",
 }
 
 MIDDLEWARE = [
@@ -91,7 +99,7 @@ TEMPLATES = [
     },
 ]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_ID = 1
 
 WSGI_APPLICATION = 'auth_config.wsgi.application'
@@ -148,3 +156,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'assyl.akhambay@gmail.com'
+EMAIL_HOST_PASSWORD = 'dncz oonk widu uitb'
