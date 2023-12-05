@@ -169,3 +169,6 @@ EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'assyl.akhambay@gmail.com'
 EMAIL_HOST_PASSWORD = 'dncz oonk widu uitb'
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
