@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qds21+#0b$)2%y!6g%o&j1@%-=s-ej*s(&0eort03e+u$7tjql
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sites",
 
     'accounts.apps.AccountsConfig',
+    'corsheaders',
 
     "rest_framework",
     "rest_framework.authtoken",
@@ -73,6 +74,7 @@ SPECTACULAR_SETTINGS = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

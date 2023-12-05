@@ -9,6 +9,7 @@ distlib==0.3.7
 dj-rest-auth==5.0.2
 Django==4.2.7
 django-allauth==0.58.2
+django-cors-headers==4.3.1
 djangorestframework==3.14.0
 drf-spectacular==0.21.2
 filelock==3.12.4
